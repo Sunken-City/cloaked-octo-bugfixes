@@ -1,3 +1,7 @@
+Unity/Library/*.*
+Unity/Temp/*.*
+Unity/Temp/
+Unity/Library/
 Unity/Library/ScriptAssemblies/CompilationCompleted.txt
 Unity/Unity.userprefs
 Unity/Library/ScriptAssemblies/CompilationCompleted.txt
