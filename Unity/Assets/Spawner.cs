@@ -16,8 +16,8 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void Spawn() {
-		for (int y = 0; y < 25; y+=2) {
-			for (int x = -10; x < 25; x+=2) {
+		for (int y = 0; y < 15; y+=2) {
+			for (int x = -10; x < 15; x+=2) {
 				Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
 			}
 		}
