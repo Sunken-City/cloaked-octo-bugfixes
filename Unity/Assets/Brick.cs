@@ -13,7 +13,7 @@ public class Brick : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter(Collision collision)
+	void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.name == "Ball")
 		{
@@ -21,7 +21,7 @@ public class Brick : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter( Collider other )
+	void OnTriggerEnter2D( Collider2D other )
 	{
 		Destroy (other.gameObject);
 		Debug.Log (" ASDFASD ASDFASDF ASDF ");

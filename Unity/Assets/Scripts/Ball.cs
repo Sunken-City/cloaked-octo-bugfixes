@@ -25,17 +25,13 @@ public class Ball : MonoBehaviour
 			//transform.position += m_velocity * Time.deltaTime;
 		}
 
-		void OnCollisionEnter (Collision collision)
+		void OnCollisionEnter2D (Collision2D collision)
 		{
-			foreach (ContactPoint contact in collision.contacts) {
-				if( m_rb ) {
-					//m_rb.velocity = Vector3.Reflect( m_rb.velocity, contact.normal );
-				}
-			}
+			Debug.Log (" ASDFKAJSFLK ");
 		}
 
 	
-	void OnTriggerEnter( Collider other )
+	void OnTriggerEnter2D( Collider2D other )
 	{
 		Destroy (other.gameObject);
 		Debug.Log (" ASDFKAJSFLK ");
