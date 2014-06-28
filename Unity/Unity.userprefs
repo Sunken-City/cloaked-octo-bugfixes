@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ball.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Controller.cs">
     <Files>
-      <File FileName="Assets\Scripts\Ball.cs" Line="27" Column="4" />
-      <File FileName="..\..\..\Unity Projects\Pong Test\Assets\Ball\Ball.cs" Line="32" Column="7" />
+      <File FileName="Assets\Controller.cs" Line="8" Column="35" />
+      <File FileName="Assets\Scripts\Ball.cs" Line="39" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
