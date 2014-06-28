@@ -37,9 +37,10 @@ public class Ball : MonoBehaviour
 			if (collision.gameObject.name == "Paddle")
 			{
 			    Vector3 directionToBall = transform.position - collision.gameObject.transform.position;
-				float ballSpeed = m_rb.velocity.magnitude;
+				float ballSpeed = 10.0f;
 			    
 			    Vector3 newBallVelocity = directionToBall.normalized * ballSpeed;
+     			newBallVelocity.x *= 20;
 				m_rb.velocity = newBallVelocity;
 			}
 		}
