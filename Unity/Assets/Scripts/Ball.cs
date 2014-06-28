@@ -5,17 +5,15 @@ public class Ball : MonoBehaviour
 {
 
 		private Rigidbody2D m_rb;
-		private Vector3 m_velocity;
 
 		// Use this for initialization
 		void Start ()
 		{
-		float speed = 10.0f;
+			float speed = 10.0f;
 
 				m_rb = GetComponent< Rigidbody2D > ();
 				if (m_rb) {
 					m_rb.velocity = new Vector2( speed * Mathf.Cos ( Mathf.Deg2Rad * 45.0f ), speed * Mathf.Sin ( Mathf.Deg2Rad * 45.0f ) );
-					m_velocity = m_rb.velocity;
 				}
 
 				
