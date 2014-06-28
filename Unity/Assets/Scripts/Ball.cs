@@ -27,13 +27,18 @@ public class Ball : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D collision)
 		{
-			Debug.Log (" ASDFKAJSFLK ");
-		}
+			//If collided with a brick, destroy it
+			if (collision.gameObject.CompareTag( "Brick"))
+			{
+				Destroy( collision.gameObject );
+			}
+			
+			//If collided withe the paddle, change the angle of the ball based on the direction
+			if (collision.gameObject.name == "Paddle")
+			{
+			    Vector2 directionToBall = transform.position - collision.gameObject.transform.position;
+				float ballSpeed = m_rb.velocity.magnitude;
 
-	
-	void OnTriggerEnter2D( Collider2D other )
-	{
-		Destroy (other.gameObject);
-		Debug.Log (" ASDFKAJSFLK ");
-	}
+			}
+		}
 }

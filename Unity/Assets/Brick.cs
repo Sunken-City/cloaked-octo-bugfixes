@@ -13,17 +13,4 @@ public class Brick : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D(Collision2D collision)
-	{
-		if (collision.gameObject.name == "Ball")
-		{
-			Destroy( this );
-		}
-	}
-
-	void OnTriggerEnter2D( Collider2D other )
-	{
-		Destroy (other.gameObject);
-		Debug.Log (" ASDFASD ASDFASDF ASDF ");
-	}
 }
