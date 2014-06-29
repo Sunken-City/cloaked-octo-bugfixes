@@ -5,24 +5,27 @@ public class Spawner : MonoBehaviour {
 
 	public Transform brick;
 
-	public int [][] Level2 = 
+	public int[][][] Levels =
 	{
-		new int[] {0,0,0,0,1,0,0,0,0},
-		new int[] {0,0,0,1,1,1,0,0,0},
-		new int[] {0,0,0,0,1,0,0,0,0},
-		new int[] {0,0,0,0,0,0,0,0,0},
+		new int[][]
+		{
+			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,1,1,1,0,0,0},
+			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+		},
+		new int[][]
+		{
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+		},
 	};
 
-	public int [][] Level1 = 
-	{
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-	};
 	// Use this for initialization
 	void Start () {
-		Spawn ();
+		Spawn (0);
 	}
 	
 	// Update is called once per frame
@@ -30,10 +33,10 @@ public class Spawner : MonoBehaviour {
 		
 	}
 
-	void Spawn() 
+	void Spawn(int levelNumber) 
 	{
 		float y = 3f;
-		foreach (var layer in Level1) 
+		foreach (var layer in Levels[levelNumber]) 
 		{
 			float x = -12f;
 			foreach (int position in layer) 
