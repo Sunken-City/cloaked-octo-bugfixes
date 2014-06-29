@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour {
 			{
 				if(position == 1)
 				{
-						Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
+					var block = Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
 				}
 				x += 3f;
 			}
