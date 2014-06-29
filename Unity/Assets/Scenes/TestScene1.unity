@@ -497,6 +497,10 @@ Prefab:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 2096000534}
+    - target: {fileID: 11400000, guid: a7a737a904bf89e488e8fd65c26b9160, type: 2}
+      propertyPath: initialBall
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7a737a904bf89e488e8fd65c26b9160, type: 2}
   m_RootGameObject: {fileID: 1400430510}

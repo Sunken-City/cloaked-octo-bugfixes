@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  initialBall: 1
+  initialBall: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
