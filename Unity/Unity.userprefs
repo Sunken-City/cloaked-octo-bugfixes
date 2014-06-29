@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ball.cs">
     <Files>
-      <File FileName="Assets\Scripts\Ball.cs" Line="30" Column="42" />
-      <File FileName="Assets\Brick.cs" Line="6" Column="27" />
+      <File FileName="Assets\Scripts\Ball.cs" Line="40" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

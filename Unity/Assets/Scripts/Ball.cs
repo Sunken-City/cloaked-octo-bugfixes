@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 				float ballSpeed = 10.0f;
 			    
 			    Vector3 newBallVelocity = directionToBall.normalized * ballSpeed;
-     			newBallVelocity.x *= 20;
+     			newBallVelocity.x *= 2;
 				m_rb.velocity = newBallVelocity;
 			}
 		}
