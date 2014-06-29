@@ -12,6 +12,7 @@ public class Ball : MonoBehaviour
 		{
 			float speed = 5.0f;
 			justSpawned = true;
+			
 			m_rb = GetComponent< Rigidbody2D > ();
 			if (m_rb) {
 				m_rb.velocity = new Vector2( speed * Mathf.Cos ( Mathf.Deg2Rad * 45.0f ), speed * Mathf.Sin ( Mathf.Deg2Rad * 45.0f ) );
