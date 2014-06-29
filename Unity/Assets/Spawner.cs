@@ -4,6 +4,14 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public Transform brick;
+
+	public int [,] Level1 = 
+	{
+		{0,0,1,1,1,1,0,0},
+		{0,0,1,1,1,1,0,0},
+		{0,0,1,1,1,1,0,0},
+		{0,0,1,1,1,1,0,0},
+	};
 	// Use this for initialization
 	void Start () {
 		Spawn ();
@@ -16,10 +24,9 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void Spawn() {
-		for (int y = 0; y < 15; y+=2) {
-			for (int x = -10; x < 15; x+=2) {
-				Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
-			}
+		foreach (var layer in Level1) 
+		{
+
 		}
 	}
 }
