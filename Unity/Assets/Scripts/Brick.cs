@@ -20,7 +20,13 @@ public class Brick : MonoBehaviour {
 	}
 	void OnDestroy() {
 		if (!isQuitting)
-			Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
+		{
+		    GameObject newBall = Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity) as GameObject;
+			if( newBall )
+			{
+				newBall.layer = 8;
+			}
+		}
 	}
 
 }
