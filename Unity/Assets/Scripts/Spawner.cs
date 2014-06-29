@@ -12,9 +12,9 @@ public class Spawner : MonoBehaviour {
 		//Level 0
 		new int[][]
 		{
-			new int[] {0,0,0,0,0,0,0,0,0},
 			new int[] {0,0,0,0,1,0,0,0,0},
 			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,1,0,0,0,1,0,0},
 			new int[] {0,0,0,0,0,0,0,0,0},
 		},
 		//Level 1
@@ -22,13 +22,13 @@ public class Spawner : MonoBehaviour {
 		{
 			new int[] {0,0,0,0,0,0,0,0,0},
 			new int[] {0,0,1,0,1,0,1,0,0},
-			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,0,1,0,1,0,0,0},
 			new int[] {0,0,0,0,0,0,0,0,0},
 		},
 		//Level 2
 		new int[][]
 		{
-			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,1,1,1,0,0,0},
 			new int[] {0,0,0,1,1,1,0,0,0},
 			new int[] {0,0,0,0,1,0,0,0,0},
 			new int[] {0,0,0,0,0,0,0,0,0},
@@ -49,12 +49,21 @@ public class Spawner : MonoBehaviour {
 			new int[] {0,1,1,0,0,0,1,1,0},
 			new int[] {0,1,1,0,0,0,1,1,0},
 		},
+		//Level 5
 		new int[][]
 		{
+			new int[] {0,0,0,0,0,0,0,0,0},
 			new int[] {0,0,1,1,1,1,1,0,0},
 			new int[] {0,0,1,1,1,1,1,0,0},
 			new int[] {0,0,1,1,1,1,1,0,0},
-			new int[] {0,0,1,1,1,1,1,0,0},
+		},
+		//Level 6
+		new int[][]
+		{
+			new int[] {0,1,1,1,1,1,1,1,0},
+			new int[] {0,1,1,1,1,1,1,1,0},
+			new int[] {0,1,1,1,1,1,1,1,0},
+			new int[] {0,1,1,1,1,1,1,1,0},
 		},
 	};
 
