@@ -6,12 +6,14 @@ public class Brick : MonoBehaviour {
 	public Transform ball;
 	public Sprite[] sprites;
 	private bool isQuitting = false;
+	public static int brickCount = 0;
 
 	void Awake() 
 	{
 		var renderer = this.GetComponent<SpriteRenderer>();
 		renderer.color = new Color(3, 3, 3);
 		renderer.sprite = sprites[Random.Range(0, 3)];
+		brickCount += 1;
 	}
 
 	// Use this for initialization
@@ -30,10 +32,7 @@ public class Brick : MonoBehaviour {
 		if (!isQuitting)
 		{
 		    GameObject newBall = Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity) as GameObject;
-			if( newBall )
-			{
-				newBall.layer = 8;
-			}
+			brickCount -= 1;
 		}
 	}
 
