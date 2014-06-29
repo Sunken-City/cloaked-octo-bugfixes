@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Brick.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\OutOfBounds.cs">
     <Files>
-      <File FileName="Assets\Scripts\Spawner.cs" Line="36" Column="33" />
-      <File FileName="Assets\Scripts\Brick.cs" Line="27" Column="24" />
-      <File FileName="Assets\Scripts\Controller.cs" Line="30" Column="1" />
+      <File FileName="Assets\Scripts\Spawner.cs" Line="36" Column="25" />
+      <File FileName="Assets\Scripts\Brick.cs" Line="27" Column="23" />
+      <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\OutOfBounds.cs" Line="23" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
