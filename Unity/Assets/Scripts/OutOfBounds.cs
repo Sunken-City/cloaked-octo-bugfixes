@@ -3,6 +3,7 @@ using System.Collections;
 
 public class OutOfBounds : MonoBehaviour {
 
+	public int m_LevelBallDestroyLimit;
 	private int m_numberBallsDestroyed;
 
 	// Use this for initialization
@@ -21,6 +22,8 @@ public class OutOfBounds : MonoBehaviour {
 		{
 			Destroy( collision.gameObject );
 			m_numberBallsDestroyed++;
+
+
 		}
 	}
 }
