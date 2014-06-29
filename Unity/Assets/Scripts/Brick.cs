@@ -1,17 +1,18 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Brick : MonoBehaviour {
 
 	public Transform ball;
 	public Sprite[] sprites;
+	public Color[] colors;
 	private bool isQuitting = false;
 	public static int brickCount = 0;
 
 	void Awake() 
 	{
 		var renderer = this.GetComponent<SpriteRenderer>();
-		renderer.color = new Color(3, 3, 3);
+		renderer.material.color = new Color (Random.Range (0f, 1f), Random.Range (0f, 1f), Random.Range (0f, 1f));
 		renderer.sprite = sprites[Random.Range(0, 3)];
 		brickCount += 1;
 	}
