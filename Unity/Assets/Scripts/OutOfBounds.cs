@@ -5,10 +5,13 @@ public class OutOfBounds : MonoBehaviour {
 
 	public int m_LevelBallDestroyLimit;
 	private int m_numberBallsDestroyed;
+	public GUIText BallsRemainingText;
 
 	// Use this for initialization
 	void Start () {
 		m_numberBallsDestroyed = 0;
+		BallsRemainingText.text = m_LevelBallDestroyLimit + " / " + m_LevelBallDestroyLimit;
+
 	}
 	
 	// Update is called once per frame
@@ -23,7 +26,7 @@ public class OutOfBounds : MonoBehaviour {
 			Destroy( collision.gameObject );
 			m_numberBallsDestroyed++;
 
-
+			BallsRemainingText.text = ( m_LevelBallDestroyLimit - m_numberBallsDestroyed ) + " / " + m_LevelBallDestroyLimit;
 		}
 	}
 }
