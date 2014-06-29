@@ -5,6 +5,7 @@ public class Spawner : MonoBehaviour {
 
 	public Transform brick;
 
+
 	public int [][] Level1 = 
 	{
 		new int[] {0,0,1,1,1,1,0,0},
@@ -32,7 +33,7 @@ public class Spawner : MonoBehaviour {
 			{
 				if(position == 1)
 				{
-					Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
+						Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
 				}
 				x += 3f;
 			}
