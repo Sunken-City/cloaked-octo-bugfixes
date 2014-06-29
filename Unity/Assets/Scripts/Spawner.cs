@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour {
 
 	public Transform brick;
 
-	public int [][] Level1 = 
+	public int [][] Level2 = 
 	{
 		new int[] {0,0,0,0,1,0,0,0,0},
 		new int[] {0,0,0,1,1,1,0,0,0},
@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour {
 		new int[] {0,0,0,0,0,0,0,0,0},
 	};
 
-	public int [][] Level2 = 
+	public int [][] Level1 = 
 	{
 		new int[] {0,0,1,1,1,1,1,0,0},
 		new int[] {0,0,1,1,1,1,1,0,0},

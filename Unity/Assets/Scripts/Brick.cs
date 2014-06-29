@@ -9,14 +9,13 @@ public class Brick : MonoBehaviour {
 
 	void Awake() 
 	{
-
+		var renderer = this.GetComponent<SpriteRenderer>();
+		renderer.color = new Color(3, 3, 3);
+		renderer.sprite = sprites[Random.Range(0, 3)];
 	}
 
 	// Use this for initialization
 	void Start () {
-		var color = this.GetComponent<SpriteRenderer>();
-		color.color = new Color(Random.Range(0, 256), Random.Range(0, 256), Random.Range(0, 256));
-		color.sprite = sprites[Random.Range(0, 3)];
 	}
 	
 	// Update is called once per frame
