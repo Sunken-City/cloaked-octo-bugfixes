@@ -33,7 +33,6 @@ public class Ball : MonoBehaviour
 				if(!justSpawned)
 					Destroy(collision.gameObject);
 			}
-			
 			//If collided withe the paddle, change the angle of the ball based on the direction
 			if (collision.gameObject.name == "Paddle")
 			{
