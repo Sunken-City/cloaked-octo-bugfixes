@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-			float speed = 5.0f;
+			float speed = 7.0f;
 			justSpawned = true;
 			
 			m_rb = GetComponent< Rigidbody2D > ();
@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour
 				if (justSpawned)
 					justSpawned = false;
 			    Vector3 directionToBall = transform.position - collision.gameObject.transform.position;
-				float ballSpeed = 5.0f;
+				float ballSpeed = 7.0f;
 			    
 			    Vector3 newBallVelocity = directionToBall.normalized * ballSpeed;
      			newBallVelocity.x *= 2;
