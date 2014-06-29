@@ -8,10 +8,10 @@ public class Spawner : MonoBehaviour {
 
 	public int [][] Level1 = 
 	{
-		new int[] {0,0,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,0,0},
+		new int[] {0,0,1,1,1,1,1,0,0},
+		new int[] {0,0,1,1,1,1,1,0,0},
+		new int[] {0,0,1,1,1,1,1,0,0},
+		new int[] {0,0,1,1,1,1,1,0,0},
 	};
 	// Use this for initialization
 	void Start () {
@@ -25,10 +25,10 @@ public class Spawner : MonoBehaviour {
 
 	void Spawn() 
 	{
-		float y = 0f;
+		float y = 3f;
 		foreach (var layer in Level1) 
 		{
-			float x = -10f;
+			float x = -12f;
 			foreach (int position in layer) 
 			{
 				if(position == 1)
