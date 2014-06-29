@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class OutOfBounds : MonoBehaviour {
 
 	private int m_numberBallsDestroyed;
 
@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D( Collision collision )
+	void OnCollisionEnter2D( Collision2D collision )
 	{
 		if( collision.gameObject.CompareTag("Ball") )
 		{

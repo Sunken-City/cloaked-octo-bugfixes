@@ -55,17 +55,16 @@ public class Ball : MonoBehaviour
 			if(!justSpawned)
 				Destroy(collision.gameObject);
 		}
-		
 		//If collided withe the paddle, change the angle of the ball based on the direction
 		if (collision.gameObject.name == "Paddle")
 		{
 			if (justSpawned)
 				justSpawned = false;
 		    Vector3 directionToBall = transform.position - collision.gameObject.transform.position;
-			float ballSpeed = 5.0f;
+			float ballSpeed = 7.0f;
 		    
 		    Vector3 newBallVelocity = directionToBall.normalized * ballSpeed;
-		newBallVelocity.x *= 2;
+			newBallVelocity.x *= 2;
 			m_rb.velocity = newBallVelocity;
 		}
 	}

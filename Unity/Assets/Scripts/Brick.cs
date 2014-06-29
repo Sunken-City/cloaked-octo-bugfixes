@@ -4,10 +4,18 @@ using System.Collections;
 public class Brick : MonoBehaviour {
 
 	public Transform ball;
+	public Sprite[] sprites;
 	private bool isQuitting = false;
+
+	void Awake() 
+	{
+		var renderer = this.GetComponent<SpriteRenderer>();
+		renderer.color = new Color(3, 3, 3);
+		renderer.sprite = sprites[Random.Range(0, 3)];
+	}
+
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame

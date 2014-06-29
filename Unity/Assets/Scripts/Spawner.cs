@@ -5,24 +5,27 @@ public class Spawner : MonoBehaviour {
 
 	public Transform brick;
 
-	public int [][] Level1 = 
+	public int[][][] Levels =
 	{
-		new int[] {0,0,0,0,1,0,0,0,0},
-		new int[] {0,0,0,1,1,1,0,0,0},
-		new int[] {0,0,0,0,1,0,0,0,0},
-		new int[] {0,0,0,0,0,0,0,0,0},
+		new int[][]
+		{
+			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,1,1,1,0,0,0},
+			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+		},
+		new int[][]
+		{
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+		},
 	};
 
-	public int [][] Level2 = 
-	{
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-		new int[] {0,0,1,1,1,1,1,0,0},
-	};
 	// Use this for initialization
 	void Start () {
-		Spawn ();
+		Spawn (0);
 	}
 	
 	// Update is called once per frame
@@ -30,17 +33,17 @@ public class Spawner : MonoBehaviour {
 		
 	}
 
-	void Spawn() 
+	void Spawn(int levelNumber) 
 	{
 		float y = 3f;
-		foreach (var layer in Level1) 
+		foreach (var layer in Levels[levelNumber]) 
 		{
 			float x = -12f;
 			foreach (int position in layer) 
 			{
 				if(position == 1)
 				{
-						Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
+					var block = Instantiate(brick, new Vector3(x, y, 0f), Quaternion.identity);
 				}
 				x += 3f;
 			}
