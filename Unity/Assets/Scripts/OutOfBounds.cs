@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class OutOfBounds : MonoBehaviour {
 
 	private int m_numberBallsDestroyed;
 
