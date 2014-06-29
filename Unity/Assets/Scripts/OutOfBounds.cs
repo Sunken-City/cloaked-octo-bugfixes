@@ -15,7 +15,7 @@ public class OutOfBounds : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D( Collision collision )
+	void OnCollisionEnter2D( Collision2D collision )
 	{
 		if( collision.gameObject.CompareTag("Ball") )
 		{
