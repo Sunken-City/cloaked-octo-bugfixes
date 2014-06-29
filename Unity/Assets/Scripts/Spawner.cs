@@ -7,12 +7,45 @@ public class Spawner : MonoBehaviour {
 
 	public int[][][] Levels =
 	{
+		//Level 0
+		new int[][]
+		{
+			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,0,0,1,0,0,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+		},
+		//Level 1
+		new int[][]
+		{
+			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,1,0,1,0,1,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+			new int[] {0,0,0,0,0,0,0,0,0},
+		},
+		//Level 2
 		new int[][]
 		{
 			new int[] {0,0,0,0,1,0,0,0,0},
 			new int[] {0,0,0,1,1,1,0,0,0},
 			new int[] {0,0,0,0,1,0,0,0,0},
 			new int[] {0,0,0,0,0,0,0,0,0},
+		},
+		//Level 3
+		new int[][]
+		{
+			new int[] {0,1,0,0,0,0,0,1,0},
+			new int[] {0,0,0,1,1,1,0,0,0},
+			new int[] {0,0,0,1,1,1,0,0,0},
+			new int[] {0,1,0,0,0,0,0,1,0},
+		},
+		//Level 4
+		new int[][]
+		{
+			new int[] {0,1,1,0,0,0,1,1,0},
+			new int[] {0,1,1,0,0,0,1,1,0},
+			new int[] {0,1,1,0,0,0,1,1,0},
+			new int[] {0,1,1,0,0,0,1,1,0},
 		},
 		new int[][]
 		{
@@ -25,7 +58,7 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Spawn (0);
+		Spawn (3);
 	}
 	
 	// Update is called once per frame
