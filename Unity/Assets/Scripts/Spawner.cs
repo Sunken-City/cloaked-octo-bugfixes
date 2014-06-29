@@ -4,6 +4,8 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public Transform brick;
+	public AudioClip[] songs;
+	public int Level = 0;
 
 	public int[][][] Levels =
 	{
@@ -58,19 +60,22 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Spawn (3);
+		Spawn (Level);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Brick.brickCount == 0) 
 		{
-
+			Level++;
+			Spawn (Level);
 		}
 	}
 
 	void Spawn(int levelNumber) 
 	{
+		this.GetComponent<AudioSource>().clip = songs [levelNumber];
+		this.GetComponent<AudioSource>().Play ();
 		float y = 3f;
 		foreach (var layer in Levels[levelNumber]) 
 		{
