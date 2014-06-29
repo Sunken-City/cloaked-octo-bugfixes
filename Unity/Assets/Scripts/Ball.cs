@@ -18,6 +18,7 @@ public class Ball : MonoBehaviour
 	{
 		float speed = 5.0f;
 		justSpawned = true;
+		this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,0.5f);
 		m_rb = GetComponent< Rigidbody2D > ();
 		if (m_rb)
 		{
@@ -59,7 +60,10 @@ public class Ball : MonoBehaviour
 		if (collision.gameObject.name == "Paddle")
 		{
 			if (justSpawned)
+			{
 				justSpawned = false;
+				this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,1f);
+			}
 		    Vector3 directionToBall = transform.position - collision.gameObject.transform.position;
 			float ballSpeed = 7.0f;
 		    
