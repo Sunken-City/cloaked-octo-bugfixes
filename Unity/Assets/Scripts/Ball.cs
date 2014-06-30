@@ -4,6 +4,9 @@ using System.Collections;
 public class Ball : MonoBehaviour
 {
 	public GameObject paddle;
+	public AudioClip PaddleHitSound;
+	public AudioClip BrickBreakSound;
+	public AudioClip BallLostSound;
 	/// <summary>
 	/// Check this if this is the first ball in the level
 	/// </summary>
@@ -66,6 +69,9 @@ public class Ball : MonoBehaviour
 		{
 			if(!justSpawned)
 				Destroy(collision.gameObject);
+			
+			this.GetComponent<AudioSource>().clip = BrickBreakSound;
+			this.GetComponent<AudioSource>().Play ();
 		}
 		//If collided withe the paddle, change the angle of the ball based on the direction
 		if (collision.gameObject.name == "Paddle")
@@ -84,6 +90,16 @@ public class Ball : MonoBehaviour
 			{
 				m_rb.velocity = newBallVelocity;
 			}
+
+			
+			this.GetComponent<AudioSource>().clip = PaddleHitSound;
+			this.GetComponent<AudioSource>().Play ();
+		}
+
+		if( collision.gameObject.name == "Bottom Wall" )
+		{
+			this.GetComponent<AudioSource>().clip = BallLostSound;
+			this.GetComponent<AudioSource>().Play ();
 		}
 	}
 
