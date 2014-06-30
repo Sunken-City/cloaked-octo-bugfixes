@@ -78,6 +78,10 @@ public class Spawner : MonoBehaviour {
 	void Update () {
 		if (Brick.brickCount == 0) 
 		{
+			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+			foreach (var ball in balls) {
+				Destroy (ball);
+			}
 			Level++;
 			Spawn (Level);
 		}
