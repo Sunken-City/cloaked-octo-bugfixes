@@ -101,7 +101,7 @@ GUIText:
   m_Text: Congrats.
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 400, y: 140}
+  m_PixelOffset: {x: 600, y: 140}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 1e36c3efcd5d6904d947bf9363559827, type: 3}
@@ -237,12 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e858cc9dc252b5842b2b0e441c1cab3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Title
-  - TestScene1
-  - GoodJob
-  - GameOgre
-  - YouWin
   sceneNumber: 1
 --- !u!132 &201657914
 GUIText:
@@ -255,7 +249,7 @@ GUIText:
   m_Text: Go to the next level
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 400, y: -150}
+  m_PixelOffset: {x: 600, y: -150}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: f690cc819728a504d96c51bf1b1c85d0, type: 3}
@@ -444,7 +438,7 @@ GUIText:
   m_Text: You tried so hard.
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 400, y: 0}
+  m_PixelOffset: {x: 600, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: a0b0d25c741e6f7439f39a4d43717b75, type: 3}

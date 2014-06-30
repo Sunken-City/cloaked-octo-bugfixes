@@ -144,15 +144,15 @@ GUIText:
   m_Enabled: 1
   serializedVersion: 3
   m_Text: FLUSTER CLUCK
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 500, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
   m_FontSize: 90
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -209,7 +209,7 @@ GUIText:
   m_Text: Start Game
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: -20, y: -50}
+  m_PixelOffset: {x: 100, y: -50}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
