@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
 	public AudioClip[] songs;
 	public int Level = 0;
 	public OutOfBounds BallDestroyer;
+	private static bool brickCountReady = false;
 
 	public int[][][] Levels =
 	{
@@ -82,6 +83,16 @@ public class Spawner : MonoBehaviour {
 		}
 	}
 
+	public static int getBrickCount()
+	{
+		if(brickCountReady)
+		{
+			brickCountReady = false;
+			return Brick.brickCount;
+		}
+		return 0;
+	}
+
 	void Spawn(int levelNumber) 
 	{
 		this.GetComponent<AudioSource>().clip = songs [levelNumber];
@@ -105,5 +116,6 @@ public class Spawner : MonoBehaviour {
 		{
 			BallDestroyer.resetBrickCount();
 		}
+		brickCountReady = true;
 	}
 }

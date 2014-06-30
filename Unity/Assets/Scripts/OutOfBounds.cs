@@ -17,7 +17,13 @@ public class OutOfBounds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		int count = Spawner.getBrickCount();
+		if (count != 0) 
+		{
+			m_LevelBallDestroyLimit = count + 1;
+
+			BallsRemainingText.text = "x " + (m_LevelBallDestroyLimit - m_numberBallsDestroyed) + "/" + m_LevelBallDestroyLimit;
+		}
 	}
 
 	void OnCollisionEnter2D( Collision2D collision )

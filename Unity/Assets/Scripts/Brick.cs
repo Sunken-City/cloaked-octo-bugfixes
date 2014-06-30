@@ -32,8 +32,7 @@ public class Brick : MonoBehaviour {
 	void OnDestroy() {
 		if (!isQuitting)
 		{
-		    GameObject newBall = Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity) as GameObject;
-			newBall.layer = 9;
+			Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
 			brickCount -= 1;
 		}
 	}
