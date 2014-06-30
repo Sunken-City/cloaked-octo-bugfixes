@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour {
 	public Transform brick;
 	public AudioClip[] songs;
 	public int Level = 0;
+	public OutOfBounds BallDestroyer;
 
 	public int[][][] Levels =
 	{
@@ -98,6 +99,11 @@ public class Spawner : MonoBehaviour {
 				x += 3f;
 			}
 			y += 0.8f;
+		}
+		
+		if( BallDestroyer )
+		{
+			BallDestroyer.resetBrickCount();
 		}
 	}
 }
