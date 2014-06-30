@@ -12,7 +12,7 @@ public class Brick : MonoBehaviour {
 	void Awake() 
 	{
 		var renderer = this.GetComponent<SpriteRenderer>();
-		renderer.material.color = new Color (Random.Range (0f, 1f), Random.Range (0f, 1f), Random.Range (0f, 1f));
+		//renderer.material.color = new Color (Random.Range (0f, 1f), Random.Range (0f, 1f), Random.Range (0f, 1f));
 		renderer.sprite = sprites[Random.Range(0, 3)];
 		brickCount += 1;
 	}
