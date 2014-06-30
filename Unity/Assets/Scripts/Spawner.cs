@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
 	public AudioClip[] songs;
 	public int Level = 0;
 	public OutOfBounds BallDestroyer;
+	private static bool brickCountReady = false;
 
 	public int[][][] Levels =
 	{
@@ -77,9 +78,23 @@ public class Spawner : MonoBehaviour {
 	void Update () {
 		if (Brick.brickCount == 0) 
 		{
+			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+			foreach (var ball in balls) {
+				Destroy (ball);
+			}
 			Level++;
 			Spawn (Level);
 		}
+	}
+
+	public static int getBrickCount()
+	{
+		if(brickCountReady)
+		{
+			brickCountReady = false;
+			return Brick.brickCount;
+		}
+		return 0;
 	}
 
 	void Spawn(int levelNumber) 
@@ -105,5 +120,6 @@ public class Spawner : MonoBehaviour {
 		{
 			BallDestroyer.resetBrickCount();
 		}
+		brickCountReady = true;
 	}
 }

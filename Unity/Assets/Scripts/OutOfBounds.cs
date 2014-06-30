@@ -11,13 +11,19 @@ public class OutOfBounds : MonoBehaviour {
 	void Start () {
 		m_numberBallsDestroyed = 0;
 		m_LevelBallDestroyLimit = Brick.brickCount + 1;
-		BallsRemainingText.text = m_LevelBallDestroyLimit + " / " + m_LevelBallDestroyLimit;
+		BallsRemainingText.text ="x " + m_LevelBallDestroyLimit + "/" + m_LevelBallDestroyLimit;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		int count = Spawner.getBrickCount();
+		if (count != 0) 
+		{
+			m_LevelBallDestroyLimit = count + 1;
+
+			BallsRemainingText.text = "x " + (m_LevelBallDestroyLimit - m_numberBallsDestroyed) + "/" + m_LevelBallDestroyLimit;
+		}
 	}
 
 	void OnCollisionEnter2D( Collision2D collision )
@@ -27,7 +33,7 @@ public class OutOfBounds : MonoBehaviour {
 			Destroy( collision.gameObject );
 			m_numberBallsDestroyed++;
 
-			BallsRemainingText.text = ( m_LevelBallDestroyLimit - m_numberBallsDestroyed ) + " / " + m_LevelBallDestroyLimit;
+			BallsRemainingText.text = "x " + ( m_LevelBallDestroyLimit - m_numberBallsDestroyed ) + "/" + m_LevelBallDestroyLimit;
 
 			if( m_LevelBallDestroyLimit - m_numberBallsDestroyed <= 0 )
 			{
