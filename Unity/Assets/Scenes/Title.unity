@@ -209,7 +209,7 @@ GUIText:
   m_Text: Start Game
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 100, y: -50}
+  m_PixelOffset: {x: 0, y: -50}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
