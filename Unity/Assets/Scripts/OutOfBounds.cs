@@ -21,7 +21,7 @@ public class OutOfBounds : MonoBehaviour {
 		if (count != 0) 
 		{
 			m_LevelBallDestroyLimit = count + 1;
-
+			m_numberBallsDestroyed = 0;
 			BallsRemainingText.text = "x " + (m_LevelBallDestroyLimit - m_numberBallsDestroyed) + "/" + m_LevelBallDestroyLimit;
 		}
 	}
