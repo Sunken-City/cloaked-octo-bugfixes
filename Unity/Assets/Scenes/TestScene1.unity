@@ -871,6 +871,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: f0092a5bf4f6b7248b640e4bb9788fd4,
         type: 2}
+    - target: {fileID: 100000, guid: b125f3f68d6fb154ab509f6ffb7cde3f, type: 2}
+      propertyPath: m_TagString
+      value: Paddle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b125f3f68d6fb154ab509f6ffb7cde3f, type: 2}
   m_RootGameObject: {fileID: 2096000534}
@@ -890,7 +894,7 @@ GameObject:
   - 60: {fileID: 2096000539}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

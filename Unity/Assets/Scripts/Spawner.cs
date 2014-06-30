@@ -84,6 +84,8 @@ public class Spawner : MonoBehaviour {
 			}
 			Level++;
 			Spawn (Level);
+			Controller paddle = GameObject.FindGameObjectWithTag("Paddle").GetComponent<Controller>();
+			paddle.ResetBallAndPosition();
 		}
 	}
 

@@ -19,7 +19,7 @@ public class Controller : MonoBehaviour {
 		ResetBallAndPosition();
 	}
 
-	void ResetBallAndPosition ()
+	public void ResetBallAndPosition ()
 	{
 		//Create the ball
 		Vector3 ballPosition = new Vector3( transform.position.x, transform.position.y + 0.25f, transform.position.z );
