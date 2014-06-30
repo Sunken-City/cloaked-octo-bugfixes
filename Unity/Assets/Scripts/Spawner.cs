@@ -62,15 +62,16 @@ public class Spawner : MonoBehaviour {
 		//Level 6
 		new int[][]
 		{
-			new int[] {0,1,1,1,1,1,1,1,0},
-			new int[] {0,1,1,1,1,1,1,1,0},
-			new int[] {0,1,1,1,1,1,1,1,0},
-			new int[] {0,1,1,1,1,1,1,1,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
+			new int[] {0,0,1,1,1,1,1,0,0},
 		},
 	};
 
 	// Use this for initialization
 	void Start () {
+		Level = PlayerPrefs.GetInt ("CurrentLevel");
 		Spawn (Level);
 	}
 	
@@ -78,14 +79,22 @@ public class Spawner : MonoBehaviour {
 	void Update () {
 		if (Brick.brickCount == 0) 
 		{
-			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+			Level++;
+			PlayerPrefs.SetInt("CurrentLevel", Level);
+			if (Level == 7)
+			{
+				PlayerPrefs.SetInt("CurrentLevel", 0);
+				Application.LoadLevel (StartGame.scenes[4]);
+			}
+			else
+				Application.LoadLevel (StartGame.scenes[2]);
+			/*GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 			foreach (var ball in balls) {
 				Destroy (ball);
 			}
-			Level++;
 			Spawn (Level);
 			Controller paddle = GameObject.FindGameObjectWithTag("Paddle").GetComponent<Controller>();
-			paddle.ResetBallAndPosition();
+			paddle.ResetBallAndPosition();*/
 		}
 	}
 
