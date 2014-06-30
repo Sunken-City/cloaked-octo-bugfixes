@@ -197,7 +197,7 @@ GUIText:
   m_Text: Start Game
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 0, y: 0}
+  m_PixelOffset: {x: -20, y: -50}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -232,6 +232,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e858cc9dc252b5842b2b0e441c1cab3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenes:
+  - Title
+  - TestScene1
+  - GoodJob
+  - GameOgre
+  - YouWin
+  sceneNumber: 1
 --- !u!1 &1911819031
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,10 +360,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1866792753
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f49359c3c583e74e8bbe98cd2ead908, type: 3}
-  m_Color: {r: .367647052, g: .686004162, b: 1, a: 1}
+  m_Color: {r: .294117659, g: .619607866, b: .729411781, a: 1}
 --- !u!4 &1972995993
 Transform:
   m_ObjectHideFlags: 0
@@ -365,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 1972995991}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: 0, y: 0, z: 20}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalScale: {x: 9.5, y: 9.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

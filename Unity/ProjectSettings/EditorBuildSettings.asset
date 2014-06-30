@@ -10,4 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene1.unity
   - enabled: 1
+    path: Assets/Scenes/GoodJob.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOgre.unity
+  - enabled: 1
     path: Assets/Scenes/YouWin.unity

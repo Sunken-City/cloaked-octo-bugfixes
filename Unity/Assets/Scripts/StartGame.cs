@@ -3,6 +3,15 @@ using System.Collections;
 
 public class StartGame : MonoBehaviour {
 
+	public string[] scenes = {
+		"Title",
+		"TestScene1",
+		"GoodJob",
+		"GameOgre",
+		"YouWin",
+	};
+
+	public int sceneNumber;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,7 +24,7 @@ public class StartGame : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		Application.LoadLevel ("TestScene1");
+		Application.LoadLevel (scenes[sceneNumber]);
 	}
 
 	void OnMouseOver()
