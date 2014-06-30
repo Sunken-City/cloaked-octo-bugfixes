@@ -10,6 +10,7 @@ public class OutOfBounds : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_numberBallsDestroyed = 0;
+		m_LevelBallDestroyLimit = Brick.brickCount + 1;
 		BallsRemainingText.text = m_LevelBallDestroyLimit + " / " + m_LevelBallDestroyLimit;
 
 	}
@@ -27,6 +28,24 @@ public class OutOfBounds : MonoBehaviour {
 			m_numberBallsDestroyed++;
 
 			BallsRemainingText.text = ( m_LevelBallDestroyLimit - m_numberBallsDestroyed ) + " / " + m_LevelBallDestroyLimit;
+
+			if( m_LevelBallDestroyLimit - m_numberBallsDestroyed <= 0 )
+			{
+				GameOver();
+			}
+			
+
+
 		}
+	}
+
+	public void resetBrickCount ()
+	{
+		Start ();
+	}
+
+	void GameOver()
+	{
+		//TODO
 	}
 }

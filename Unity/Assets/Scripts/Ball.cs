@@ -63,6 +63,7 @@ public class Ball : MonoBehaviour
 			{
 				justSpawned = false;
 				this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,1f);
+				this.gameObject.layer = 8;
 			}
 		    Vector3 directionToBall = transform.position - collision.gameObject.transform.position;
 			float ballSpeed = 7.0f;
