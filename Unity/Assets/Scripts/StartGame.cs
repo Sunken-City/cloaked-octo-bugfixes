@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StartGame : MonoBehaviour {
 
-	public string[] scenes = {
+	public static string[] scenes = {
 		"Title",
 		"TestScene1",
 		"GoodJob",

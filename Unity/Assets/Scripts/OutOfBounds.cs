@@ -52,6 +52,6 @@ public class OutOfBounds : MonoBehaviour {
 
 	void GameOver()
 	{
-		//TODO
+		Application.LoadLevel (StartGame.scenes[3]);
 	}
 }
