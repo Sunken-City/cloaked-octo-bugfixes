@@ -17,22 +17,33 @@ public class Ball : MonoBehaviour
 	void Start ()
 	{
 		float speed = 5.0f;
-		justSpawned = true;
-		this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,0.5f);
 		m_rb = GetComponent< Rigidbody2D > ();
 		if (m_rb)
 		{
 			if (!initialBall) {
-					float randomAngle = Random.Range (0.0f, 360.0f);
-					m_rb.velocity = new Vector2 (speed * Mathf.Cos (Mathf.Deg2Rad * randomAngle), speed * Mathf.Sin (Mathf.Deg2Rad * randomAngle));
+				float randomAngle = Random.Range (0.0f, 360.0f);
+				m_rb.velocity = new Vector2 (speed * Mathf.Cos (Mathf.Deg2Rad * randomAngle), speed * Mathf.Sin (Mathf.Deg2Rad * randomAngle));
+				justSpawned = true;
+				this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,0.5f);
 			}
 			else
 			{
+				this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,1f);
 				m_rb.velocity = Vector3.zero;
 				m_rb.angularVelocity = 0.0f;
 			}
 		}
 
+	}
+
+	public void SetInitialBall()
+	{
+		initialBall = true;
+		justSpawned = false;
+		launched = false;
+		
+		this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,1f);
+		this.gameObject.layer = 8;
 	}
 
 	// Update is called once per frame
@@ -59,9 +70,8 @@ public class Ball : MonoBehaviour
 		//If collided withe the paddle, change the angle of the ball based on the direction
 		if (collision.gameObject.name == "Paddle")
 		{
-			if (justSpawned)
-			{
-				justSpawned = false;
+			if (this.justSpawned) {
+				this.justSpawned = false;
 				this.GetComponent<SpriteRenderer>().material.color = new Color(1f,1f,1f,1f);
 				this.gameObject.layer = 8;
 			}
@@ -70,7 +80,10 @@ public class Ball : MonoBehaviour
 		    
 		    Vector3 newBallVelocity = directionToBall.normalized * ballSpeed;
 			newBallVelocity.x *= 2;
-			m_rb.velocity = newBallVelocity;
+			if( m_rb )
+			{
+				m_rb.velocity = newBallVelocity;
+			}
 		}
 	}
 
