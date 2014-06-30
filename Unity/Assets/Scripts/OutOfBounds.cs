@@ -6,13 +6,14 @@ public class OutOfBounds : MonoBehaviour {
 	public int m_LevelBallDestroyLimit;
 	private int m_numberBallsDestroyed;
 	public GUIText BallsRemainingText;
+	public static int BallsInPlay;
 
 	// Use this for initialization
 	void Start () {
 		m_numberBallsDestroyed = 0;
 		m_LevelBallDestroyLimit = Brick.brickCount + 1;
 		BallsRemainingText.text ="x " + m_LevelBallDestroyLimit + "/" + m_LevelBallDestroyLimit;
-
+		OutOfBounds.BallsInPlay = 1;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +35,14 @@ public class OutOfBounds : MonoBehaviour {
 			m_numberBallsDestroyed++;
 
 			BallsRemainingText.text = "x " + ( m_LevelBallDestroyLimit - m_numberBallsDestroyed ) + "/" + m_LevelBallDestroyLimit;
+
+
+
+			OutOfBounds.BallsInPlay--;
+			if( OutOfBounds.BallsInPlay == 0 )
+			{
+				GameOver();
+			}
 
 			if( m_LevelBallDestroyLimit - m_numberBallsDestroyed <= 0 )
 			{

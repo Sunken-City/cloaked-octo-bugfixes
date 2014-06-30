@@ -34,6 +34,7 @@ public class Brick : MonoBehaviour {
 			Transform ballTransform = (Transform)Instantiate(ball, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
 			ballTransform.gameObject.layer = 9;
 			brickCount -= 1;
+			OutOfBounds.BallsInPlay++;
 		}
 	}
 
