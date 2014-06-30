@@ -17,20 +17,38 @@ public class Snark : MonoBehaviour {
 		"You are my rose.",
 		"Don't do that again."
 	};
+
+	public string[] winComments = 
+	{
+		"You did it.",
+		"Fantastic effort.",
+		"Wow.",
+		"What a show.",
+		"Good job.",
+		"You are talented.",
+		"Excellent work.",
+		"You are strong.",
+		"I'm proud of you."
+	};
 	// Use this for initialization
 	void Start () {
-		if(positiveSnark)
-		{
-
-		}
-		else
-		{
-			this.GetComponent<GUIText>().text = loseComments[Random.Range(0, loseComments.Length)];
-		}	
+		getSnark ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void getSnark() 
+	{
+		if(positiveSnark)
+		{
+			this.GetComponent<GUIText>().text = winComments[Random.Range(0, winComments.Length)];
+		}
+		else
+		{
+			this.GetComponent<GUIText>().text = loseComments[Random.Range(0, loseComments.Length)];
+		}	
 	}
 }
